@@ -1052,7 +1052,8 @@
       "contact": "SySolve",
       "invoiceNumber": "40038",
       "amount": 757.84,
-      "dueDate": "2026-08-12"
+      "dueDate": "2026-08-12",
+      "excluded": true
     },
     {
       "id": "qyaq3eovcjsk",
@@ -1061,7 +1062,8 @@
       "contact": "SySolve",
       "invoiceNumber": "40042",
       "amount": 1245.02,
-      "dueDate": "2026-08-19"
+      "dueDate": "2026-08-19",
+      "excluded": true
     },
     {
       "id": "1dlza7yccjsk",
@@ -1070,7 +1072,8 @@
       "contact": "SySolve",
       "invoiceNumber": "30015",
       "amount": 2002.86,
-      "dueDate": "2026-09-18"
+      "dueDate": "2026-09-18",
+      "excluded": true
     },
     {
       "id": "53xqxpxlcjsk",
@@ -1079,7 +1082,8 @@
       "contact": "SySolve",
       "invoiceNumber": "40049",
       "amount": 108.26,
-      "dueDate": "2026-09-22"
+      "dueDate": "2026-09-22",
+      "excluded": true
     },
     {
       "id": "obrrx9prcjsk",
