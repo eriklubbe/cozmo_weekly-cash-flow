@@ -553,7 +553,8 @@
       "contact": "hastings sofa",
       "invoiceNumber": "178710",
       "amount": 159.13,
-      "dueDate": "2026-10-23"
+      "dueDate": "2026-10-23",
+      "expectedDate": "2026-10-26"
     },
     {
       "id": "6b70rna3cjsj",
@@ -562,7 +563,8 @@
       "contact": "hastings sofa",
       "invoiceNumber": "178716",
       "amount": 41.53,
-      "dueDate": "2026-10-23"
+      "dueDate": "2026-10-23",
+      "expectedDate": "2026-10-26"
     },
     {
       "id": "6elc2z9rcjsj",
@@ -571,7 +573,8 @@
       "contact": "hastings sofa",
       "invoiceNumber": "178712",
       "amount": 294.17,
-      "dueDate": "2026-10-23"
+      "dueDate": "2026-10-23",
+      "expectedDate": "2026-10-26"
     },
     {
       "id": "sgvpbj73cjsj",
@@ -580,7 +583,8 @@
       "contact": "hastings sofa",
       "invoiceNumber": "178709",
       "amount": 125.33,
-      "dueDate": "2026-10-23"
+      "dueDate": "2026-10-23",
+      "expectedDate": "2026-10-26"
     },
     {
       "id": "n5kr826ccjsj",
@@ -589,7 +593,8 @@
       "contact": "hastings sofa",
       "invoiceNumber": "178713",
       "amount": 137.53,
-      "dueDate": "2026-10-23"
+      "dueDate": "2026-10-23",
+      "expectedDate": "2026-10-26"
     },
     {
       "id": "yqcz5cfacjsj",
@@ -598,7 +603,8 @@
       "contact": "hastings sofa",
       "invoiceNumber": "178714",
       "amount": 90.73,
-      "dueDate": "2026-10-23"
+      "dueDate": "2026-10-23",
+      "expectedDate": "2026-10-26"
     },
     {
       "id": "ijq24parcjsj",
@@ -607,7 +613,8 @@
       "contact": "hastings sofa",
       "invoiceNumber": "178715",
       "amount": 55.93,
-      "dueDate": "2026-10-23"
+      "dueDate": "2026-10-23",
+      "expectedDate": "2026-10-26"
     },
     {
       "id": "8uvu4jracjsj",
@@ -616,7 +623,8 @@
       "contact": "hastings sofa",
       "invoiceNumber": "178711",
       "amount": 179.53,
-      "dueDate": "2026-10-23"
+      "dueDate": "2026-10-23",
+      "expectedDate": "2026-10-26"
     },
     {
       "id": "83ht7mslcjsj",
