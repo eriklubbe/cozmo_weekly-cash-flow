@@ -9,5 +9,5 @@ window.APP_CONFIG = {
   repo: 'eriklubbe/cozmo_weekly-cash-flow',  // GitHub repository holding data/cashflow.json
   storageKey: 'cozmo-cashflow',              // prefix for what the browser saves; must differ per company
   creditFacility: 'Credit facility',         // the list on This week for bills paid with a credit facility
-  bank: 'Bank',                              // names the bulk payment file
+  bank: 'Barclays',                          // names the bulk payment file
 };
