@@ -1244,7 +1244,9 @@
       "id": "myr7xslcdi79",
       "name": "Amex",
       "type": "out",
-      "weeks": {}
+      "weeks": {
+        "2026-11-02": 40000
+      }
     }
   ],
   "rules": [],
