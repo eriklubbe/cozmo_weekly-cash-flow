@@ -78,7 +78,8 @@
       "contact": "Awin",
       "invoiceNumber": "1241-470881",
       "amount": 219.1,
-      "dueDate": "2026-10-29"
+      "dueDate": "2026-10-29",
+      "excluded": true
     },
     {
       "id": "5tbwbn3pcjsj",
