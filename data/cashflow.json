@@ -483,7 +483,8 @@
       "contact": "Figma",
       "invoiceNumber": "GN1BE6JF-0002",
       "amount": 7.5,
-      "dueDate": "2026-06-17"
+      "dueDate": "2026-06-17",
+      "excluded": true
     },
     {
       "id": "q3btyvdicjsj",
@@ -492,7 +493,8 @@
       "contact": "Figma",
       "invoiceNumber": "GN1BE6JF-0004",
       "amount": 7.5,
-      "dueDate": "2026-06-20"
+      "dueDate": "2026-06-20",
+      "excluded": true
     },
     {
       "id": "2dl8aslecjsj",
@@ -501,7 +503,8 @@
       "contact": "Figma",
       "invoiceNumber": "0LRLJQYX-0002",
       "amount": 201.6,
-      "dueDate": "2026-09-22"
+      "dueDate": "2026-09-22",
+      "excluded": true
     },
     {
       "id": "pq08kw9scjsj",
