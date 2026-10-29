@@ -516,7 +516,8 @@
       "contact": "Future",
       "invoiceNumber": "INV-2534",
       "amount": 300,
-      "dueDate": "2026-06-10"
+      "dueDate": "2026-06-10",
+      "excluded": true
     },
     {
       "id": "q3log930cjsj",
