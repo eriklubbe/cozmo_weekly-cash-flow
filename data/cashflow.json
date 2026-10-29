@@ -958,7 +958,8 @@
       "contact": "hettich",
       "invoiceNumber": "302553",
       "amount": 3238.9,
-      "dueDate": "2026-05-07"
+      "dueDate": "2026-05-07",
+      "expectedDate": "2026-12-14"
     },
     {
       "id": "3hxmxfaqcjsk",
