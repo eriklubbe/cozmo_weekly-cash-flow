@@ -1005,7 +1005,8 @@
       "contact": "ORIGIN COFFEE",
       "invoiceNumber": "5744908",
       "amount": -8.62,
-      "dueDate": "2026-12-06"
+      "dueDate": "2026-12-06",
+      "excluded": true
     },
     {
       "id": "0d6d6131cjsk",
