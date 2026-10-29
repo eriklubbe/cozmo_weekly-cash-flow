@@ -456,7 +456,8 @@
       "contact": "Corten",
       "invoiceNumber": "SI00035886/B",
       "amount": 52.53,
-      "dueDate": "2026-10-28"
+      "dueDate": "2026-10-28",
+      "excluded": true
     },
     {
       "id": "b5gj28d2cjsj",
