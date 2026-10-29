@@ -1102,7 +1102,8 @@
       "contact": "warwick",
       "invoiceNumber": "SI1137705",
       "amount": 773.46,
-      "dueDate": "2026-10-20"
+      "dueDate": "2026-10-20",
+      "expectedDate": "2026-10-26"
     },
     {
       "id": "rcfjcyvzcjsk",
@@ -1111,7 +1112,8 @@
       "contact": "warwick",
       "invoiceNumber": "SI1139328",
       "amount": 640.61,
-      "dueDate": "2026-10-20"
+      "dueDate": "2026-10-20",
+      "expectedDate": "2026-10-26"
     },
     {
       "id": "fhaf7ob0cjsk",
@@ -1120,7 +1122,8 @@
       "contact": "warwick",
       "invoiceNumber": "SI1142390",
       "amount": 1325.76,
-      "dueDate": "2026-10-20"
+      "dueDate": "2026-10-20",
+      "expectedDate": "2026-10-26"
     },
     {
       "id": "u4yhxuj1cjsk",
