@@ -476,7 +476,8 @@
       "contact": "Dezeen",
       "invoiceNumber": "14206",
       "amount": 2400,
-      "dueDate": "2026-09-24"
+      "dueDate": "2026-09-24",
+      "excluded": true
     },
     {
       "id": "pplvebr3cjsj",
