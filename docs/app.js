@@ -45,6 +45,7 @@ function defaultState() {
     items: [],           // invoices and bills: {id,type:'in'|'out',contact,invoiceNumber,amount,dueDate,expectedDate?,excluded?,source:'xero'|'manual'}
     recurring: [],       // {id,name,direction,amount,frequency,dayOfMonth,dayOfWeek,startDate,endDate,category,active}
     recurOverrides: {},  // "recurringId|originalDate" -> {date?, skip?}
+    forecasts: [],       // estimates typed into the 13 week view, one amount per week: {id,name,type,weeks:{mondayISO: amount}}
     rules: [],           // payment timing per contact: {id,type,contact,months,days}
     suppliers: [],       // bank details: {id,name,accountName?,accountType,sortCode,accountNo,addedAt,changedAt?}
     lastImport: {},      // {in: iso, out: iso}
@@ -205,6 +206,16 @@ function buildEvents(weeks) {
       });
     }
   }
+  for (const f of state.forecasts || []) {
+    for (const [ws, amt] of Object.entries(f.weeks || {})) {
+      const v = Number(amt) || 0;
+      if (!v || ws < start) continue; // weeks already gone; ones after the window land in Later
+      ev.push({
+        key: 'f:' + f.id + '|' + ws, kind: 'forecast', fid: f.id, type: f.type || 'in',
+        row: f.name, forecast: true, ref: 'Forecast', amount: v, date: ws, origDate: ws,
+      });
+    }
+  }
   // Overdue = due before the weekend ahead of week 1; that weekend's items count in week 1.
   const cutoff = overdueCutoff(weeks);
   for (const e of ev) {
@@ -218,20 +229,23 @@ function buildEvents(weeks) {
 /** Column indexes per row: 0..n-1 = weeks, n = Later, n+1 = Overdue (not counted in cash). */
 const overdueCutoff = weeks => addDays(weeks[0].start, -2); // the Saturday before week 1
 
-const rowKey = e => `${e.type}|${e.recurring ? 'r' : 'c'}|${e.row}`;
+const rowKey = e => `${e.type}|${e.forecast ? 'f' : e.recurring ? 'r' : 'c'}|${e.row}`;
 
 function buildForecast() {
   const weeks = getWeeks();
   const n = weeks.length;
   const events = buildEvents(weeks);
   const rows = new Map();
+  const newRow = (rk, e) => ({ key: rk, type: e.type, name: e.row, recurring: !!e.recurring, dd: !!e.dd, forecast: !!e.forecast, fid: e.fid,
+    cells: Array.from({ length: n + 2 }, () => []), total: 0 });
+  for (const f of state.forecasts || []) { // forecast lines show even with no amounts yet, so there is somewhere to type
+    const e = { type: f.type || 'in', row: f.name, forecast: true, fid: f.id };
+    rows.set(rowKey(e), newRow(rowKey(e), e));
+  }
   for (const e of events) {
     const rk = rowKey(e);
     let r = rows.get(rk);
-    if (!r) {
-      r = { key: rk, type: e.type, name: e.row, recurring: !!e.recurring, dd: !!e.dd, cells: Array.from({ length: n + 2 }, () => []), total: 0 };
-      rows.set(rk, r);
-    }
+    if (!r) { r = newRow(rk, e); rows.set(rk, r); }
     r.cells[e.week].push(e);
     if (e.week < n) r.total += e.amount;
   }
@@ -318,7 +332,21 @@ function renderOverview() {
   const list = [...rows.values()];
   const section = (title) => `<tr class="section"><td class="rowhead">${title}</td><td colspan="${span - 1}"></td></tr>`;
   const sub = (title) => `<tr class="subsection"><td class="rowhead">${title}</td><td colspan="${span - 1}"></td></tr>`;
+  const forecastRowHtml = r => {
+    const f = state.forecasts.find(x => x.id === r.fid) || { weeks: {} };
+    let t = `<tr data-row="${esc(r.key)}" class="forecast"><td class="rowhead" title="${esc(r.name)} — type the amount expected each week">${esc(r.name)}${isReadOnly() ? '' : `<button class="link danger del-forecast" type="button" data-fid="${esc(r.fid)}" title="Remove this line and its amounts">×</button>`}</td><td class="num od"></td>`;
+    weeks.forEach(w => {
+      const v = Number(f.weeks[w.start]) || 0;
+      t += `<td class="num est" data-week="${w.i}"><input class="est" type="text" inputmode="decimal" autocomplete="off" size="8" data-fid="${esc(r.fid)}" data-ws="${w.start}"` +
+        ` value="${v ? esc(money(v)) : ''}" placeholder="–" title="${esc(r.name)}, week of ${fmtDate(w.start)} — type the amount expected" ${isReadOnly() ? 'disabled' : ''}></td>`;
+    });
+    const later = cellSum(r.cells[n]), sign = r.type === 'out' ? -1 : 1;
+    t += `<td class="num later"${later ? ` title="${r.cells[n].map(e => `${fmtDate(e.date)}: ${money(e.amount)}`).join(', ')} — lengthen the forecast on Data & import to edit these"` : ''}>${later ? money(sign * later) : ''}</td>` +
+      `<td class="num total">${money(sign * r.total)}</td></tr>`;
+    return t;
+  };
   const rowHtml = r => {
+    if (r.forecast) return forecastRowHtml(r);
     const rule = !r.recurring && ruleFor({ type: r.type, contact: r.name });
     let t = `<tr data-row="${esc(r.key)}"><td class="rowhead" title="${esc(r.name)}${rule ? ` — due dates shifted ${ruleLabel(rule)}` : ''}">${esc(r.name)}${r.recurring ? `<span class="tag">${r.dd ? 'direct debit' : 'recurring'}</span>` : ''}${rule ? `<span class="tag">${ruleLabel(rule)}</span>` : ''}</td>`;
     [od, ...r.cells.keys()].slice(0, n + 2).forEach(i => {
@@ -336,21 +364,28 @@ function renderOverview() {
     `<tr class="subtotal"><td class="rowhead">${label}</td><td class="num od">${arr[od] ? money(sign * arr[od]) : ''}</td>` + arr.slice(0, n).map(v => `<td class="num">${money(sign * v)}</td>`).join('') +
     `<td class="num later">${money(sign * arr[n])}</td><td class="num total">${money(sign * total)}</td></tr>`;
 
-  const ins = list.filter(r => r.type === 'in' && !r.recurring).sort(byTotal);
+  const insF = list.filter(r => r.type === 'in' && r.forecast).sort((a, b) => a.name.localeCompare(b.name));
+  const ins = list.filter(r => r.type === 'in' && !r.recurring && !r.forecast).sort(byTotal);
   const insR = list.filter(r => r.type === 'in' && r.recurring).sort(byTotal);
-  const outs = list.filter(r => r.type === 'out' && !r.recurring).sort(byTotal);
+  const outsF = list.filter(r => r.type === 'out' && r.forecast).sort((a, b) => a.name.localeCompare(b.name));
+  const outs = list.filter(r => r.type === 'out' && !r.recurring && !r.forecast).sort(byTotal);
   const outsR = list.filter(r => r.type === 'out' && r.recurring).sort(byTotal);
 
   h += '<tbody>';
   h += section('Cash in');
-  if (ins.length) { if (insR.length) h += sub('Customers'); h += ins.map(rowHtml).join(''); }
+  // Forecast lines: typed per week; the last row adds a new line.
+  const addLine = type => isReadOnly() ? '' : `<tr class="forecast add"><td class="rowhead"><input class="add-forecast" data-type="${type}" type="text" autocomplete="off"` +
+    ` placeholder="+ Add a line" title="Type a name and press Enter — e.g. ${type === 'in' ? 'Shopify' : 'Meta ads'}"></td><td colspan="${span - 1}"></td></tr>`;
+  h += sub('Sales forecast') + insF.map(rowHtml).join('') + addLine('in');
+  if (ins.length) { if (insR.length || insF.length) h += sub('Customers'); h += ins.map(rowHtml).join(''); }
   if (insR.length) { h += sub('Recurring receipts'); h += insR.map(rowHtml).join(''); }
-  if (!ins.length && !insR.length) h += `<tr><td class="rowhead muted">No receivables</td><td colspan="${span - 1}"></td></tr>`;
+  if (!ins.length && !insR.length && !insF.length) h += `<tr><td class="rowhead muted">No receivables</td><td colspan="${span - 1}"></td></tr>`;
   h += subtotal('Total cash in', cin, totIn, 1);
   h += section('Cash out');
+  h += sub('Planned payments') + outsF.map(rowHtml).join('') + addLine('out');
   if (outs.length) { h += sub('Suppliers & bills'); h += outs.map(rowHtml).join(''); }
   if (outsR.length) { h += sub('Recurring payments & direct debits'); h += outsR.map(rowHtml).join(''); }
-  if (!outs.length && !outsR.length) h += `<tr><td class="rowhead muted">No payables</td><td colspan="${span - 1}"></td></tr>`;
+  if (!outs.length && !outsR.length && !outsF.length) h += `<tr><td class="rowhead muted">No payables</td><td colspan="${span - 1}"></td></tr>`;
   h += subtotal('Total cash out', cout, totOut, -1);
   h += '</tbody>';
 
@@ -464,6 +499,27 @@ function setOpeningCash(input) {
   if (isNaN(v)) { toast('Type an amount, e.g. 42500'); input.value = money(Number(state.settings.openingBalance) || 0, true); return; }
   if (round2(v) === round2(Number(state.settings.openingBalance) || 0)) { input.value = money(v, true); return; }
   mutate(() => { state.settings.openingBalance = round2(v); state.settings.balanceDate = todayISO(); }, `Opening cash set to ${money(round2(v), true)}`);
+}
+
+/** Forecast lines (e.g. expected sales): one amount per week, typed straight into the grid. */
+const forecastAmount = input => Number((state.forecasts.find(f => f.id === input.dataset.fid)?.weeks || {})[input.dataset.ws]) || 0;
+function setForecastAmount(input) {
+  const f = state.forecasts.find(x => x.id === input.dataset.fid);
+  if (!f) return;
+  const ws = input.dataset.ws;
+  const v = input.value.trim() === '' ? 0 : parseAmount(input.value);
+  if (isNaN(v)) { toast('Type an amount, e.g. 100000'); input.value = forecastAmount(input) ? money(forecastAmount(input)) : ''; return; }
+  const amount = round2(Math.abs(v));
+  if (amount === forecastAmount(input)) return;
+  mutate(() => {
+    f.weeks = f.weeks || {};
+    if (amount) f.weeks[ws] = amount; else delete f.weeks[ws];
+  }, `${f.name}, week of ${fmtDate(ws)}: ${amount ? money(amount) : 'cleared'}`);
+}
+
+function addForecastLine(name, type) {
+  if (state.forecasts.some(f => f.type === type && f.name.toLowerCase() === name.toLowerCase())) { toast(`${name} is already there`); return; }
+  mutate(() => { state.forecasts.push({ id: uid(), name, type, weeks: {} }); }, `Added ${name} — type the amount for each week`);
 }
 
 /** Cash in / out including overdue; the tile fills like a battery with the overdue share. */
@@ -654,6 +710,12 @@ function wireGrid() {
   let dragKeys = null;
 
   grid.addEventListener('click', ev => {
+    const del = ev.target.closest('button.del-forecast');
+    if (del) {
+      const f = state.forecasts.find(x => x.id === del.dataset.fid);
+      if (f && confirm(`Remove ${f.name} and all its weekly amounts?`)) mutate(() => { state.forecasts = state.forecasts.filter(x => x !== f); }, `Removed ${f.name}`);
+      return;
+    }
     const sum = ev.target.closest('td.sum');
     if (sum) {
       const { sum: type, col } = sum.dataset;
@@ -670,10 +732,29 @@ function wireGrid() {
     ev.stopPropagation();
   });
 
-  grid.addEventListener('focusin', ev => { if (ev.target.id === 'opening-input') { ev.target.value = String(Number(state.settings.openingBalance) || 0); ev.target.select(); } });
-  grid.addEventListener('change', ev => { if (ev.target.id === 'opening-input') setOpeningCash(ev.target); });
+  grid.addEventListener('focusin', ev => {
+    if (ev.target.id === 'opening-input') { ev.target.value = String(Number(state.settings.openingBalance) || 0); ev.target.select(); }
+    if (ev.target.matches('input.est')) { const v = forecastAmount(ev.target); ev.target.value = v ? String(v) : ''; ev.target.select(); }
+  });
+  grid.addEventListener('change', ev => {
+    if (ev.target.id === 'opening-input') setOpeningCash(ev.target);
+    if (ev.target.matches('input.est')) setForecastAmount(ev.target);
+  });
+  grid.addEventListener('focusout', ev => { // left unchanged: show it formatted again
+    if (ev.target.matches('input.est')) { const v = forecastAmount(ev.target); ev.target.value = v ? money(v) : ''; }
+  });
   grid.addEventListener('focusout', ev => { if (ev.target.id === 'opening-input' && !/[£,]/.test(ev.target.value)) setOpeningCash(ev.target); });
   grid.addEventListener('keydown', ev => {
+    if (ev.target.matches('input.add-forecast')) {
+      if (ev.key === 'Enter' && ev.target.value.trim()) addForecastLine(ev.target.value.trim(), ev.target.dataset.type);
+      if (ev.key === 'Escape') { ev.target.value = ''; ev.target.blur(); }
+      return;
+    }
+    if (ev.target.matches('input.est')) {
+      if (ev.key === 'Enter') ev.target.blur();
+      if (ev.key === 'Escape') { const v = forecastAmount(ev.target); ev.target.value = v ? String(v) : ''; ev.target.blur(); }
+      return;
+    }
     if (ev.target.id !== 'opening-input') return;
     if (ev.key === 'Enter') ev.target.blur();
     if (ev.key === 'Escape') { ev.target.value = money(Number(state.settings.openingBalance) || 0, true); ev.target.blur(); }
@@ -827,7 +908,7 @@ function thisWeekRange() {
 function payRunLists() {
   refreshForecast();
   const { today, start, end, ddEnd } = thisWeekRange();
-  const out = F.events.filter(e => e.type === 'out');
+  const out = F.events.filter(e => e.type === 'out' && !e.forecast); // planned payments are estimates, not bills to pay
   const starred = (a, b) => isImportant(b) - isImportant(a); // important first
   const byDate = (a, b) => starred(a, b) || a.date.localeCompare(b.date) || a.row.localeCompare(b.row);
   return {

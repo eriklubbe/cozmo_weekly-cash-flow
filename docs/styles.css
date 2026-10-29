@@ -221,6 +221,21 @@ input[type=search] { width: 180px; }
 .grid td.opening input:hover { border-style: solid; }
 .grid td.opening input:focus { border-style: solid; background: var(--surface); }
 .grid td.opening input:disabled { border-color: transparent; background: transparent; }
+/* Forecast lines: amounts typed straight into the week cells. */
+.grid td.est { padding: 2px 3px; }
+.grid td.est input {
+  width: 100%; min-width: 0; text-align: right; font: inherit; color: var(--in);
+  padding: 3px 6px; border: 1px solid transparent; border-radius: 6px; background: var(--honey-soft);
+}
+.grid tr.forecast[data-row^="out"] td.est input { color: var(--out); }
+.grid td.est input:hover { border-color: var(--line); }
+.grid td.est input:focus { border-color: var(--ink); background: var(--surface); outline: none; }
+.grid td.est input:disabled { background: transparent; }
+.grid td.est input::placeholder { color: var(--ink-2); opacity: .5; }
+.grid .del-forecast { margin-left: 6px; font-size: 14px; line-height: 1; opacity: 0; }
+.grid tr.forecast:hover .del-forecast, .grid .del-forecast:focus { opacity: 1; }
+.grid input.add-forecast { width: 100%; font: inherit; font-size: 12px; padding: 3px 6px; border: 1px dashed var(--line); border-radius: 6px; background: transparent; color: var(--ink); }
+.grid input.add-forecast:focus { border-style: solid; border-color: var(--ink); background: var(--surface); outline: none; }
 .grid .pos-in { color: var(--in); }
 .grid .tag { font-size: 10px; font-weight: 700; color: var(--ink); background: var(--lilac); padding: 1px 6px; border-radius: 999px; margin-left: 6px; vertical-align: 1px; }
 
