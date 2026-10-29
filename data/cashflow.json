@@ -1136,12 +1136,6 @@
   ],
   "recurring": [],
   "recurOverrides": {},
-  "rules": [],
-  "suppliers": [],
-  "lastImport": {
-    "in": "2026-10-29",
-    "out": "2026-10-29"
-  },
   "forecasts": [
     {
       "id": "shopify0",
@@ -1245,6 +1239,18 @@
         "2027-02-15": 16400,
         "2027-03-15": 16400
       }
+    },
+    {
+      "id": "9dggtuqvvtqf",
+      "name": "Payroll",
+      "type": "out",
+      "weeks": {}
     }
-  ]
+  ],
+  "rules": [],
+  "suppliers": [],
+  "lastImport": {
+    "in": "2026-10-29",
+    "out": "2026-10-29"
+  }
 }
