@@ -1003,7 +1003,8 @@
       "contact": "Ofra Merom Management consulting LTD",
       "invoiceNumber": "33222",
       "amount": 225.19,
-      "dueDate": "2026-07-31"
+      "dueDate": "2026-07-31",
+      "excluded": true
     },
     {
       "id": "qc4hktf6cjsk",
