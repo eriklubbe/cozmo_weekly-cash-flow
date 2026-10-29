@@ -1082,7 +1082,8 @@
       "contact": "Ufurnish.com",
       "invoiceNumber": "INV-3587",
       "amount": 13.44,
-      "dueDate": "2026-10-30"
+      "dueDate": "2026-10-30",
+      "excluded": true
     },
     {
       "id": "mx6oqh49cjsk",
