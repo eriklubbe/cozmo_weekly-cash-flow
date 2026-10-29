@@ -1244,7 +1244,9 @@
       "id": "9dggtuqvvtqf",
       "name": "Payroll",
       "type": "out",
-      "weeks": {}
+      "weeks": {
+        "2026-10-26": 31000
+      }
     }
   ],
   "rules": [],
