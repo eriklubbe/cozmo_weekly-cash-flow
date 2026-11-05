@@ -1275,7 +1275,9 @@
       "id": "us1ywihqh3tp",
       "name": "Yushin",
       "type": "out",
-      "weeks": {}
+      "weeks": {
+        "2026-11-09": 30000
+      }
     },
     {
       "id": "2k6qkospbqhj",
