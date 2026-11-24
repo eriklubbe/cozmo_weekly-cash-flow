@@ -914,7 +914,9 @@
       "id": "e03w5meiythf",
       "name": "Erik",
       "type": "out",
-      "weeks": {}
+      "weeks": {
+        "2026-11-23": 2
+      }
     }
   ],
   "rules": [],
