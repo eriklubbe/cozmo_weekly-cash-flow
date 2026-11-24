@@ -2,7 +2,7 @@
   "settings": {
     "openingBalance": 194000,
     "balanceDate": "2026-11-12",
-    "startDate": "2026-11-09",
+    "startDate": "2026-11-23",
     "weeks": 13,
     "currency": "GBP",
     "minAmount": 0
@@ -45,114 +45,6 @@
       "dueDate": "2026-09-19"
     },
     {
-      "id": "4cgrag8pcjsj",
-      "source": "xero",
-      "type": "out",
-      "contact": "Advanced Forwarding",
-      "invoiceNumber": "00163733",
-      "amount": 1290.65,
-      "dueDate": "2026-11-12"
-    },
-    {
-      "id": "bxiuvk5scjsj",
-      "source": "xero",
-      "type": "out",
-      "contact": "Advanced Forwarding",
-      "invoiceNumber": "00163734",
-      "amount": 1553.5,
-      "dueDate": "2026-11-12"
-    },
-    {
-      "id": "s2hncm96cjsj",
-      "source": "xero",
-      "type": "out",
-      "contact": "Advanced Forwarding",
-      "invoiceNumber": "00163981",
-      "amount": 200,
-      "dueDate": "2026-11-20"
-    },
-    {
-      "id": "f4m8zraf8la1",
-      "source": "xero",
-      "type": "out",
-      "contact": "Awin",
-      "invoiceNumber": "1241-473442",
-      "amount": 484.52,
-      "dueDate": "2026-11-14"
-    },
-    {
-      "id": "yjcj9cuwcjsj",
-      "source": "xero",
-      "type": "out",
-      "contact": "Buoyant Upholstery",
-      "invoiceNumber": "1627778",
-      "amount": 1584,
-      "dueDate": "2026-11-13"
-    },
-    {
-      "id": "lkd1ifoucjsj",
-      "source": "xero",
-      "type": "out",
-      "contact": "Buoyant Upholstery",
-      "invoiceNumber": "1627779",
-      "amount": 822,
-      "dueDate": "2026-11-13"
-    },
-    {
-      "id": "ixjxzf6mcjsj",
-      "source": "xero",
-      "type": "out",
-      "contact": "Buoyant Upholstery",
-      "invoiceNumber": "1627777",
-      "amount": 1224,
-      "dueDate": "2026-11-13"
-    },
-    {
-      "id": "kz785lrfcjsj",
-      "source": "xero",
-      "type": "out",
-      "contact": "Buoyant Upholstery",
-      "invoiceNumber": "1627776",
-      "amount": 1224,
-      "dueDate": "2026-11-13"
-    },
-    {
-      "id": "qlyin7vvcjsj",
-      "source": "xero",
-      "type": "out",
-      "contact": "Buoyant Upholstery",
-      "invoiceNumber": "1627780",
-      "amount": 546,
-      "dueDate": "2026-11-13"
-    },
-    {
-      "id": "cjvn9bh3cjsj",
-      "source": "xero",
-      "type": "out",
-      "contact": "Buoyant Upholstery",
-      "invoiceNumber": "1627775",
-      "amount": 822,
-      "dueDate": "2026-11-13"
-    },
-    {
-      "id": "eq18akxm8la1",
-      "source": "xero",
-      "type": "out",
-      "contact": "Buoyant Upholstery",
-      "invoiceNumber": "1630412",
-      "amount": 1368,
-      "dueDate": "2026-11-23"
-    },
-    {
-      "id": "bfipllpm8la1",
-      "source": "xero",
-      "type": "out",
-      "contact": "Buoyant Upholstery",
-      "invoiceNumber": "1630413",
-      "amount": 822,
-      "dueDate": "2026-11-23"
-    },
-    {
       "id": "j148owzq8la1",
       "source": "xero",
       "type": "out",
@@ -168,6 +60,15 @@
       "contact": "Buoyant Upholstery",
       "invoiceNumber": "1634437",
       "amount": 1242,
+      "dueDate": "2026-12-10"
+    },
+    {
+      "id": "zoobiipw8la1",
+      "source": "xero",
+      "type": "out",
+      "contact": "Buoyant Upholstery",
+      "invoiceNumber": "1634438",
+      "amount": 822,
       "dueDate": "2026-12-10"
     },
     {
@@ -189,13 +90,22 @@
       "dueDate": "2026-12-10"
     },
     {
-      "id": "zoobiipw8la1",
+      "id": "tz2e0edbe460",
       "source": "xero",
       "type": "out",
       "contact": "Buoyant Upholstery",
-      "invoiceNumber": "1634438",
+      "invoiceNumber": "1635855",
       "amount": 822,
-      "dueDate": "2026-12-10"
+      "dueDate": "2026-12-14"
+    },
+    {
+      "id": "7oa4eov1e460",
+      "source": "xero",
+      "type": "out",
+      "contact": "Buoyant Upholstery",
+      "invoiceNumber": "1635856",
+      "amount": 822,
+      "dueDate": "2026-12-14"
     },
     {
       "id": "edkyayek8la1",
@@ -207,6 +117,15 @@
       "dueDate": "2026-11-30"
     },
     {
+      "id": "5snqhml88la1",
+      "source": "xero",
+      "type": "out",
+      "contact": "Corten",
+      "invoiceNumber": "SI00037285",
+      "amount": 741.89,
+      "dueDate": "2026-11-26"
+    },
+    {
       "id": "qqm51zga8la1",
       "source": "xero",
       "type": "out",
@@ -216,21 +135,12 @@
       "dueDate": "2026-11-26"
     },
     {
-      "id": "5snqhml88la1",
-      "source": "xero",
-      "type": "out",
-      "contact": "Corten",
-      "invoiceNumber": "SI00037285",
-      "amount": 732.84,
-      "dueDate": "2026-11-26"
-    },
-    {
       "id": "95eohh1a8la2",
       "source": "xero",
       "type": "out",
       "contact": "Corten",
       "invoiceNumber": "SI00037415/A",
-      "amount": 804.29,
+      "amount": 814.22,
       "dueDate": "2026-12-06"
     },
     {
@@ -271,12 +181,21 @@
       "dueDate": "2026-10-31"
     },
     {
+      "id": "xl3x5k05e460",
+      "source": "xero",
+      "type": "out",
+      "contact": "Etay Shaul",
+      "invoiceNumber": "20010",
+      "amount": 300,
+      "dueDate": "2026-11-08"
+    },
+    {
       "id": "pplvebr3cjsj",
       "source": "xero",
       "type": "out",
       "contact": "Figma",
       "invoiceNumber": "GN1BE6JF-0002",
-      "amount": 7.53,
+      "amount": 7.63,
       "dueDate": "2026-06-17",
       "excluded": true
     },
@@ -286,7 +205,7 @@
       "type": "out",
       "contact": "Figma",
       "invoiceNumber": "GN1BE6JF-0004",
-      "amount": 7.53,
+      "amount": 7.63,
       "dueDate": "2026-06-20",
       "excluded": true
     },
@@ -311,146 +230,11 @@
       "excluded": true
     },
     {
-      "id": "wv81vu90cjsj",
-      "source": "xero",
-      "type": "out",
-      "contact": "Gateway Shipping Company",
-      "invoiceNumber": "535617",
-      "amount": 65.5,
-      "dueDate": "2026-11-12"
-    },
-    {
-      "id": "tl44ym5w8la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "Google",
-      "invoiceNumber": "5723245432",
-      "amount": 338.16,
-      "dueDate": "2026-11-30"
-    },
-    {
-      "id": "7e0k6augcjsj",
-      "source": "xero",
-      "type": "out",
-      "contact": "Hainholz Ltd",
-      "invoiceNumber": "INV-0563",
-      "amount": 2640,
-      "dueDate": "2026-11-20"
-    },
-    {
-      "id": "bvdzhz7acjsk",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179011",
-      "amount": 962.4,
-      "dueDate": "2026-11-21"
-    },
-    {
-      "id": "imnj3svecjsk",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179010",
-      "amount": 962.4,
-      "dueDate": "2026-11-21"
-    },
-    {
-      "id": "plxlznw9cjsk",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179013",
-      "amount": 1057.2,
-      "dueDate": "2026-11-21"
-    },
-    {
-      "id": "c66n2p8qcjsk",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179012",
-      "amount": 962.4,
-      "dueDate": "2026-11-21"
-    },
-    {
-      "id": "fp2rsumhcjsk",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179014",
-      "amount": 808.8,
-      "dueDate": "2026-11-21"
-    },
-    {
-      "id": "mob41oqn8la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179087",
-      "amount": 415.2,
-      "dueDate": "2026-11-27"
-    },
-    {
-      "id": "jfuwujzs8la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179088",
-      "amount": 415.2,
-      "dueDate": "2026-11-27"
-    },
-    {
-      "id": "sa6xzijz8la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179090",
-      "amount": 663.6,
-      "dueDate": "2026-11-27"
-    },
-    {
-      "id": "liaai11i8la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179092",
-      "amount": 415.2,
-      "dueDate": "2026-11-27"
-    },
-    {
-      "id": "cqszawes8la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179094",
-      "amount": 808.8,
-      "dueDate": "2026-11-27"
-    },
-    {
-      "id": "hg90c8ps8la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179089",
-      "amount": 663.6,
-      "dueDate": "2026-11-27"
-    },
-    {
       "id": "ttmvvxh98la2",
       "source": "xero",
       "type": "out",
       "contact": "hastings sofa",
       "invoiceNumber": "179096",
-      "amount": 415.2,
-      "dueDate": "2026-11-27"
-    },
-    {
-      "id": "419im3kw8la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179091",
       "amount": 415.2,
       "dueDate": "2026-11-27"
     },
@@ -461,33 +245,6 @@
       "contact": "hastings sofa",
       "invoiceNumber": "179097",
       "amount": 663.6,
-      "dueDate": "2026-11-27"
-    },
-    {
-      "id": "fe3vj5u18la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179086",
-      "amount": 663.6,
-      "dueDate": "2026-11-27"
-    },
-    {
-      "id": "a0zg6nkc8la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179093",
-      "amount": 663.6,
-      "dueDate": "2026-11-27"
-    },
-    {
-      "id": "7g2rvhhs8la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179095",
-      "amount": 415.2,
       "dueDate": "2026-11-27"
     },
     {
@@ -518,21 +275,30 @@
       "dueDate": "2026-11-28"
     },
     {
-      "id": "2i5ubd0d8la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179128",
-      "amount": 998.4,
-      "dueDate": "2026-11-28"
-    },
-    {
       "id": "jnjxeb378la2",
       "source": "xero",
       "type": "out",
       "contact": "hastings sofa",
       "invoiceNumber": "179120",
       "amount": 663.6,
+      "dueDate": "2026-11-28"
+    },
+    {
+      "id": "tchg9j0s8la2",
+      "source": "xero",
+      "type": "out",
+      "contact": "hastings sofa",
+      "invoiceNumber": "179119",
+      "amount": 808.8,
+      "dueDate": "2026-11-28"
+    },
+    {
+      "id": "2i5ubd0d8la2",
+      "source": "xero",
+      "type": "out",
+      "contact": "hastings sofa",
+      "invoiceNumber": "179128",
+      "amount": 998.4,
       "dueDate": "2026-11-28"
     },
     {
@@ -554,20 +320,20 @@
       "dueDate": "2026-11-28"
     },
     {
+      "id": "sbyd2p788la2",
+      "source": "xero",
+      "type": "out",
+      "contact": "hastings sofa",
+      "invoiceNumber": "179118",
+      "amount": 588,
+      "dueDate": "2026-11-28"
+    },
+    {
       "id": "dthlaozj8la2",
       "source": "xero",
       "type": "out",
       "contact": "hastings sofa",
       "invoiceNumber": "179115",
-      "amount": 808.8,
-      "dueDate": "2026-11-28"
-    },
-    {
-      "id": "tchg9j0s8la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179119",
       "amount": 808.8,
       "dueDate": "2026-11-28"
     },
@@ -587,69 +353,6 @@
       "contact": "hastings sofa",
       "invoiceNumber": "179123",
       "amount": 703.2,
-      "dueDate": "2026-11-28"
-    },
-    {
-      "id": "sbyd2p788la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179118",
-      "amount": 588,
-      "dueDate": "2026-11-28"
-    },
-    {
-      "id": "3n84skdq8la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179112",
-      "amount": 808.8,
-      "dueDate": "2026-11-28"
-    },
-    {
-      "id": "cxfer3dt8la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179121",
-      "amount": 588,
-      "dueDate": "2026-11-28"
-    },
-    {
-      "id": "a1fjowe68la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179133",
-      "amount": 663.6,
-      "dueDate": "2026-11-28"
-    },
-    {
-      "id": "b2a1ch6l8la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179117",
-      "amount": 962.4,
-      "dueDate": "2026-11-28"
-    },
-    {
-      "id": "5m4cyr218la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179124",
-      "amount": 588,
-      "dueDate": "2026-11-28"
-    },
-    {
-      "id": "ohbscgjk8la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179114",
-      "amount": 588,
       "dueDate": "2026-11-28"
     },
     {
@@ -689,12 +392,21 @@
       "dueDate": "2026-11-28"
     },
     {
-      "id": "giadcmfs8la2",
+      "id": "3n84skdq8la2",
       "source": "xero",
       "type": "out",
       "contact": "hastings sofa",
-      "invoiceNumber": "179110",
+      "invoiceNumber": "179112",
       "amount": 808.8,
+      "dueDate": "2026-11-28"
+    },
+    {
+      "id": "cxfer3dt8la2",
+      "source": "xero",
+      "type": "out",
+      "contact": "hastings sofa",
+      "invoiceNumber": "179121",
+      "amount": 588,
       "dueDate": "2026-11-28"
     },
     {
@@ -707,12 +419,30 @@
       "dueDate": "2026-11-28"
     },
     {
-      "id": "fmih7ua08la2",
+      "id": "a1fjowe68la2",
       "source": "xero",
       "type": "out",
       "contact": "hastings sofa",
-      "invoiceNumber": "179125",
+      "invoiceNumber": "179133",
+      "amount": 663.6,
+      "dueDate": "2026-11-28"
+    },
+    {
+      "id": "b2a1ch6l8la2",
+      "source": "xero",
+      "type": "out",
+      "contact": "hastings sofa",
+      "invoiceNumber": "179117",
       "amount": 962.4,
+      "dueDate": "2026-11-28"
+    },
+    {
+      "id": "5m4cyr218la2",
+      "source": "xero",
+      "type": "out",
+      "contact": "hastings sofa",
+      "invoiceNumber": "179124",
+      "amount": 588,
       "dueDate": "2026-11-28"
     },
     {
@@ -731,6 +461,33 @@
       "contact": "hastings sofa",
       "invoiceNumber": "179107",
       "amount": 663.6,
+      "dueDate": "2026-11-28"
+    },
+    {
+      "id": "ohbscgjk8la2",
+      "source": "xero",
+      "type": "out",
+      "contact": "hastings sofa",
+      "invoiceNumber": "179114",
+      "amount": 588,
+      "dueDate": "2026-11-28"
+    },
+    {
+      "id": "giadcmfs8la2",
+      "source": "xero",
+      "type": "out",
+      "contact": "hastings sofa",
+      "invoiceNumber": "179110",
+      "amount": 808.8,
+      "dueDate": "2026-11-28"
+    },
+    {
+      "id": "fmih7ua08la2",
+      "source": "xero",
+      "type": "out",
+      "contact": "hastings sofa",
+      "invoiceNumber": "179125",
+      "amount": 962.4,
       "dueDate": "2026-11-28"
     },
     {
@@ -788,15 +545,6 @@
       "dueDate": "2026-12-04"
     },
     {
-      "id": "1k5e1o9u8la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179185",
-      "amount": 759.6,
-      "dueDate": "2026-12-04"
-    },
-    {
       "id": "t6ccres98la2",
       "source": "xero",
       "type": "out",
@@ -812,6 +560,15 @@
       "contact": "hastings sofa",
       "invoiceNumber": "179193",
       "amount": 550.8,
+      "dueDate": "2026-12-04"
+    },
+    {
+      "id": "1k5e1o9u8la2",
+      "source": "xero",
+      "type": "out",
+      "contact": "hastings sofa",
+      "invoiceNumber": "179185",
+      "amount": 759.6,
       "dueDate": "2026-12-04"
     },
     {
@@ -860,6 +617,33 @@
       "dueDate": "2026-12-09"
     },
     {
+      "id": "glcvjxou8la2",
+      "source": "xero",
+      "type": "out",
+      "contact": "hastings sofa",
+      "invoiceNumber": "179249",
+      "amount": 1371.6,
+      "dueDate": "2026-12-09"
+    },
+    {
+      "id": "phw6exn98la2",
+      "source": "xero",
+      "type": "out",
+      "contact": "hastings sofa",
+      "invoiceNumber": "179254",
+      "amount": 207.6,
+      "dueDate": "2026-12-09"
+    },
+    {
+      "id": "z5wn1l0k8la2",
+      "source": "xero",
+      "type": "out",
+      "contact": "hastings sofa",
+      "invoiceNumber": "179252",
+      "amount": 296.4,
+      "dueDate": "2026-12-09"
+    },
+    {
       "id": "zpvijtkp8la2",
       "source": "xero",
       "type": "out",
@@ -905,15 +689,6 @@
       "dueDate": "2026-12-09"
     },
     {
-      "id": "glcvjxou8la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179249",
-      "amount": 1371.6,
-      "dueDate": "2026-12-09"
-    },
-    {
       "id": "oyywxbt28la2",
       "source": "xero",
       "type": "out",
@@ -921,33 +696,6 @@
       "invoiceNumber": "179255",
       "amount": 51.6,
       "dueDate": "2026-12-09"
-    },
-    {
-      "id": "phw6exn98la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179254",
-      "amount": 207.6,
-      "dueDate": "2026-12-09"
-    },
-    {
-      "id": "z5wn1l0k8la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "hastings sofa",
-      "invoiceNumber": "179252",
-      "amount": 296.4,
-      "dueDate": "2026-12-09"
-    },
-    {
-      "id": "fe34vl1wcjsk",
-      "source": "xero",
-      "type": "out",
-      "contact": "Inxpress",
-      "invoiceNumber": "18830478ZAK15",
-      "amount": 308.38,
-      "dueDate": "2026-11-14"
     },
     {
       "id": "sriuxt1r8la2",
@@ -959,13 +707,13 @@
       "dueDate": "2026-11-30"
     },
     {
-      "id": "bakvzfrx8la2",
+      "id": "gxezot2pe460",
       "source": "xero",
       "type": "out",
-      "contact": "Inxpress",
-      "invoiceNumber": "18830478ZAL05-DT",
-      "amount": 47.07,
-      "dueDate": "2026-11-12"
+      "contact": "Moneypenny",
+      "invoiceNumber": "1825306 - 11",
+      "amount": 1842.42,
+      "dueDate": "2026-11-29"
     },
     {
       "id": "3vlcoa4icjsk",
@@ -973,7 +721,7 @@
       "type": "out",
       "contact": "Ofra Merom Management consulting LTD",
       "invoiceNumber": "33222",
-      "amount": 221.86,
+      "amount": 212.84,
       "dueDate": "2026-07-31",
       "excluded": true
     },
@@ -983,37 +731,18 @@
       "type": "out",
       "contact": "ORIGIN COFFEE",
       "invoiceNumber": "5744908",
-      "amount": -8.61,
+      "amount": -8.62,
       "dueDate": "2026-12-06",
       "excluded": true
     },
     {
-      "id": "7uk8scbw8la2",
+      "id": "uvtlse35e460",
       "source": "xero",
       "type": "out",
-      "contact": "Pearson Lloyd Design",
-      "invoiceNumber": "PLDL1673-COZ01-412-R",
-      "amount": 1705.03,
-      "dueDate": "2026-11-21"
-    },
-    {
-      "id": "0d6d6131cjsk",
-      "source": "xero",
-      "type": "out",
-      "contact": "Raw-Edges Design",
-      "invoiceNumber": "Cozmo_28",
-      "amount": 21277.2,
-      "dueDate": "2026-08-06",
-      "expectedDate": "2026-11-23"
-    },
-    {
-      "id": "a7km5gzs8la2",
-      "source": "xero",
-      "type": "out",
-      "contact": "Spekk",
-      "invoiceNumber": "Spekk-3649",
-      "amount": 17118,
-      "dueDate": "2026-11-15"
+      "contact": "Qualitasse",
+      "invoiceNumber": "609281",
+      "amount": 99,
+      "dueDate": "2026-10-15"
     },
     {
       "id": "aqcg3q0zcjsk",
@@ -1021,8 +750,17 @@
       "type": "out",
       "contact": "Symphony Mills",
       "invoiceNumber": "26010935",
-      "amount": 2538.45,
+      "amount": 2539.68,
       "dueDate": "2026-11-06"
+    },
+    {
+      "id": "3bqh4i0ne460",
+      "source": "xero",
+      "type": "out",
+      "contact": "Ufurnish.com",
+      "invoiceNumber": "INV-3709",
+      "amount": 16.8,
+      "dueDate": "2026-11-30"
     },
     {
       "id": "u4yhxuj1cjsk",
@@ -1183,7 +921,7 @@
   "suppliers": [],
   "lastImport": {
     "in": "2026-10-29",
-    "out": "2026-11-12"
+    "out": "2026-11-24"
   },
   "thisWeek": {
     "cash": 198000,
