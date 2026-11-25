@@ -952,6 +952,12 @@
         "2027-02-08": 7000,
         "2027-02-15": 7000
       }
+    },
+    {
+      "id": "9talwz1op273",
+      "name": "Others (software etc)",
+      "type": "out",
+      "weeks": {}
     }
   ],
   "rules": [],
