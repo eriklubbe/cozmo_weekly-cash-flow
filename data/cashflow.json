@@ -187,7 +187,8 @@
       "contact": "Etay Shaul",
       "invoiceNumber": "20010",
       "amount": 300,
-      "dueDate": "2026-11-08"
+      "dueDate": "2026-11-08",
+      "excluded": true
     },
     {
       "id": "pplvebr3cjsj",
