@@ -122,7 +122,7 @@
       "type": "out",
       "contact": "Corten",
       "invoiceNumber": "SI00037285",
-      "amount": 741.89,
+      "amount": 741.3,
       "dueDate": "2026-11-26"
     },
     {
@@ -140,7 +140,7 @@
       "type": "out",
       "contact": "Corten",
       "invoiceNumber": "SI00037415/A",
-      "amount": 814.22,
+      "amount": 813.58,
       "dueDate": "2026-12-06"
     },
     {
@@ -195,7 +195,7 @@
       "type": "out",
       "contact": "Figma",
       "invoiceNumber": "GN1BE6JF-0002",
-      "amount": 7.63,
+      "amount": 7.62,
       "dueDate": "2026-06-17",
       "excluded": true
     },
@@ -205,7 +205,7 @@
       "type": "out",
       "contact": "Figma",
       "invoiceNumber": "GN1BE6JF-0004",
-      "amount": 7.63,
+      "amount": 7.62,
       "dueDate": "2026-06-20",
       "excluded": true
     },
@@ -721,7 +721,7 @@
       "type": "out",
       "contact": "Ofra Merom Management consulting LTD",
       "invoiceNumber": "33222",
-      "amount": 212.84,
+      "amount": 212.54,
       "dueDate": "2026-07-31",
       "excluded": true
     },
@@ -750,7 +750,7 @@
       "type": "out",
       "contact": "Symphony Mills",
       "invoiceNumber": "26010935",
-      "amount": 2539.68,
+      "amount": 2540.74,
       "dueDate": "2026-11-06"
     },
     {
@@ -951,7 +951,7 @@
   "suppliers": [],
   "lastImport": {
     "in": "2026-10-29",
-    "out": "2026-11-24"
+    "out": "2026-11-25"
   },
   "thisWeek": {
     "cash": 198000,
