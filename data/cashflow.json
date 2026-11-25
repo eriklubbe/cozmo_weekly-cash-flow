@@ -744,7 +744,8 @@
       "contact": "Qualitasse",
       "invoiceNumber": "609281",
       "amount": 99,
-      "dueDate": "2026-10-15"
+      "dueDate": "2026-10-15",
+      "excluded": true
     },
     {
       "id": "aqcg3q0zcjsk",
