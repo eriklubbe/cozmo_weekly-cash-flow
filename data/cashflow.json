@@ -751,7 +751,8 @@
       "contact": "Symphony Mills",
       "invoiceNumber": "26010935",
       "amount": 2540.74,
-      "dueDate": "2026-11-06"
+      "dueDate": "2026-11-06",
+      "expectedDate": "2026-11-23"
     },
     {
       "id": "3bqh4i0ne460",
