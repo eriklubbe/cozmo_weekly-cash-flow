@@ -178,7 +178,8 @@
       "contact": "Empire Delivery",
       "invoiceNumber": "CRE5520",
       "amount": -220.8,
-      "dueDate": "2026-10-31"
+      "dueDate": "2026-10-31",
+      "excluded": true
     },
     {
       "id": "xl3x5k05e460",
