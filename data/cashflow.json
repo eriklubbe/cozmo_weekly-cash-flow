@@ -957,7 +957,9 @@
       "id": "9talwz1op273",
       "name": "Others (software etc)",
       "type": "out",
-      "weeks": {}
+      "weeks": {
+        "2026-11-23": 3000
+      }
     }
   ],
   "rules": [],
